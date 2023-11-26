@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.library1;
+
+/**
+ *
+ * @author BLT
+ */
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Library {
+    private ArrayList<Book> bookList;
+    private ArrayList<Student> studentList;
+
+    public Library() {
+        bookList = new ArrayList<>();
+        studentList = new ArrayList<>();
+    }
+
+    public void addBook(Book book) {
+        bookList.add(book);
+    }
+
+    public void removeBook(Book book) {
+        bookList.remove(book);
+    }
+
+    public void addStudent(Student student) {
+        studentList.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        studentList.remove(student);
+    }
+
+    public void displayAllBooks() {
+        for (Book book : bookList) {
+           System.out.println(book.getInfo());
+        }
+    }
+
+    public void displayAllStudents() {
+        for (Student student : studentList) {
+            System.out.println(student.getInfo());
+        }
+    }
+       public void displayInLoanBooks() {
+        for (Book book : bookList) {
+            if (book.isInLoan()) {
+                System.out.println(book.getInfo());
+            }
+        }
+    }
+
+}
+
+

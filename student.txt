@@ -1,0 +1,94 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.library1;
+
+/**
+ *
+ * @author BLT
+ */
+public class Student {
+    private int id;
+    private String name;
+    private String address;
+    private Date birthDate;
+    private String major;
+    private List<Book> borrowBook;
+
+    public Student(int id, String name, String address, Date birthDate, String major) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.birthDate = birthDate;
+        this.major = major;
+        this.borroweBook = new ArrayList<>();
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public <any> getBorrowBook() {
+        return borrowBook;
+    }
+
+    public void setBorrowBook(<any> borrowBook) {
+        this.borrowBook = borrowBook;
+    }
+
+    public void borrowBook(Book book) {
+        if (borrowBook.size() < 3) {
+            borrowBook.add(book);
+            System.out.println("Book borrowed successfully!");
+        } 
+else {
+             System.out.println("Book not borrowed");
+        }
+            } 
+int daysAllowed = 5;
+int borrowedDays = 3;
+
+if (borrowedDays <= daysAllowed) {
+    System.out.println("The student is allowed to borrow books for 5 days.");
+} 
+else {
+    System.out.println("The student is not allowed to borrow books for 5 days.");
+}
+
+}
